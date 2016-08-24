@@ -1,0 +1,6 @@
+framework module MinkasuSDK {
+  umbrella header "MinkasuSDK.h"
+
+  export *
+  module * { export * }
+}

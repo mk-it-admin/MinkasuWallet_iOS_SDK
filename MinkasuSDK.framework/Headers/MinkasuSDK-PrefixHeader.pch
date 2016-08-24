@@ -1,0 +1,109 @@
+//
+//  MinkasuSDK-PrefixHeader.pch
+//  MinkasuSDK
+//
+//  Created by Sachin Selvaraj on 2/17/16.
+//  Copyright © 2016 Sachin Selvaraj. All rights reserved.
+//
+
+#ifndef MinkasuSDK_PrefixHeader_pch
+#define MinkasuSDK_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MinkasuSDK_PrefixHeader_pch */
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "ZBarSDK.h"
+#import <RestKit/RestKit.h>
+
+
+extern NSString *base_svr_url;
+extern NSString *my_customer_id;
+extern NSString *my_device_id;
+extern double   my_latitude;
+extern double   my_longitude;
+extern NSString *my_minkasu_access_token;
+
+extern NSString *netswipe_api_token;
+extern NSString *netswipe_api_secret;
+extern NSString *netverify_api_token;
+extern NSString *netverify_api_secret;
+extern NSString *minkasu_sms_gateway_number;
+extern NSString *mixPanelToken;
+
+
+#define MIN_PIN_LENGTH 4
+#define SALT_LENTH 32   // Should match key size. For SHA-256, use 32 bytes.
+
+#define MAX_PIN_TRIES_BEFORE_LOCKOUT 3
+#define PIN_LOCKOUT_TIME_IN_S 300 // 5mins
+
+
+#define TXN_FLAG_CAPTURE_IMMEDIATE 0x1
+#define TXN_FLAG_ADDRESS_REQD 0x2
+#define TXN_FLAG_EMAIL_REQD 0x4
+#define TXN_FLAG_PHONE_REQD 0x8
+#define TXN_FLAG_TEMPLATE_TXN 0x40
+#define TXN_FLAG_VARIABLE_AMOUNT 0x80
+#define TXN_FLAG_TXN_TYPE_DONATION 0x100
+#define TXN_FLAG_SHIP_STREET_ADDR_ONLY 0x200
+#define TXN_FLAG_AMOUNT_DETERMINED_BY_ATTRIBUTES 0x400
+#define TXN_FLAG_ALLOWED_ZERO_DOLLAR 0x800
+
+#define TXN_STATE_CREATED 0
+#define TXN_STATE_AUTHORIZED 1
+#define TXN_STATE_CAPTURED 2
+#define TXN_STATE_CANCELED 3
+#define TXN_STATE_CREDITED 4
+
+#define FTU_SETUP_FLAG_PMNT_INFO_COMPLETE 1
+#define FTU_SETUP_FLAG_PIN_SETUP_COMPLETE 2
+#define FTU_SETUP_FLAG_PHONE_VERIFICATION_COMPLETE 4
+
+#define FTU_SETUP_ALL_FLAGS (FTU_SETUP_FLAG_PMNT_INFO_COMPLETE | FTU_SETUP_FLAG_PIN_SETUP_COMPLETE | FTU_SETUP_FLAG_PHONE_VERIFICATION_COMPLETE)
+
+
+#define ACCOUNT_STATUS_FLAG_DEVICE_VERIFIED 0
+#define ACCOUNT_STATUS_FLAG_PHONE_VERIFIED 1
+#define ACCOUNT_STATUS_FLAG_ID_VERIFIED 2
+
+#define ACCOUNT_STATUS_FLAG_ID_VERIFICATION_REQUIRED 16
+
+
+#define httpRequestTimeoutInterval 15
+
+#define MERCHANT_FLAG_ACCEPT_CARD_VISA  0x00100
+#define MERCHANT_FLAG_ACCEPT_CARD_MC    0x00200
+#define MERCHANT_FLAG_ACCEPT_CARD_AMEX  0x00400
+#define MERCHANT_FLAG_ACCEPT_CARD_DNRS  0x00800 // Diners
+#define MERCHANT_FLAG_ACCEPT_CARD_DSCV  0x01000 // Discover
+#define MERCHANT_FLAG_ACCEPT_CARD_JCB   0x02000
+#define MERCHANT_FLAG_ACCEPT_CARD_CUP   0x04000 // China Union Pay
+#define MERCHANT_FLAG_ACCEPT_CARD_X1    0x08000 // Placeholder 1
+#define MERCHANT_FLAG_ACCEPT_CARD_X2    0x10000 // Placeholder 2
+#define MERCHANT_FLAG_ACCEPT_CARD_X3    0x20000 // Placeholder 3
+#define MERCHANT_FLAG_ACCEPT_CARD_X4    0x40000 // Placeholder 4
+#define MERCHANT_FLAG_ACCEPT_CARD_X5    0x80000 // Placeholder 5
+
+
+
+// MINKASU ERROR CODES
+
+#define ERR_SERVER_UNREACHABLE 2000
+
+#define ERR_CARD_DECLINED_BY_PROCESSOR 3000
+#define ERR_FRAUD_SUSPECTED 3001
+#define ERR_USER_DEVICE_NEEDS_VERIFICATION 3002
+#define ERR_USER_PHONE_NEEDS_VERIFICATION 3003
+#define ERR_USER_ID_NEEDS_VERIFICATION 3004
+#define ERR_TRANSACTION_DETAILS_CHANGED 3005
+#define ERR_SERVER_TEMPORARILY_CANNOT_SERVICE_REQUEST 3006
+#define ERR_PHONE_LOCATION_NEEDED 3012
+
+
+#define ERR_UNKNOWN_ERROR 4000
+
+
