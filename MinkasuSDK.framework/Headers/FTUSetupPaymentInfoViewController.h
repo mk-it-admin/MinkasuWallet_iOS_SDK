@@ -53,7 +53,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *ScrollViewContainer;
 @property (nonatomic,strong) UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIView *ShippingAddressHeaderView;
-//@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
+@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
 
 @property int next_step_when_view_appears;
 

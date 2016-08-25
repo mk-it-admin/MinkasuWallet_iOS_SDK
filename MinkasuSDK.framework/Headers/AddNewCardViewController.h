@@ -40,7 +40,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *state;
-//@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
+@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
 
 @property BOOL cardRegistrationInProgress;
 
