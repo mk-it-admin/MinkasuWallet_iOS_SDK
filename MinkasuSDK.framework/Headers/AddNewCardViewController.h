@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "StartViewController.h"
-#import <Netswipe/NetswipeViewController.h>
+//  #import <Netswipe/NetswipeViewController.h>
 #import "CardDetails.h"
 
-@interface AddNewCardViewController : UIViewController<UITextFieldDelegate,NetswipeViewControllerDelegate>
+@interface AddNewCardViewController : UIViewController<UITextFieldDelegate>//,NetswipeViewControllerDelegate>
 
 @property StartViewController *root_view_controller;
 
@@ -40,7 +40,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *state;
-@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
+//@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
 
 @property BOOL cardRegistrationInProgress;
 
@@ -51,8 +51,8 @@
 
 - (NSString *) cardTypeFromNumber: (NSString *) cardNumber;
 
-@property (nonatomic, strong) NetswipeViewController *netswipeViewController;
+//@property (nonatomic, strong) NetswipeViewController *netswipeViewController;
 
-- (IBAction)startNetswipeSDK:(id)sender;
+//- (IBAction)startNetswipeSDK:(id)sender;
 
 @end

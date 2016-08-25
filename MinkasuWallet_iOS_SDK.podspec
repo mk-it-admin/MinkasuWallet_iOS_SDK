@@ -124,7 +124,7 @@ Pod::Spec.new do |s|
   s.dependency 'RestKit', '~>  0.20'
   s.dependency 'FLAnimatedImage', '~> 1.0'
   s.dependency 'PaymentKit'
-  s.dependency 'JumioMobileSDK/Netswipe'
+  #s.dependency 'JumioMobileSDK/Netswipe', '1.9.0'
 
   s.vendored_frameworks = 'MinkasuSDK.framework'
 
@@ -139,7 +139,7 @@ Pod::Spec.new do |s|
    s.xcconfig = {
     'OTHER_LDFLAGS' => '-ObjC -framework Accelerate -framework AudioToolbox -framework AVFoundation -framework CoreGraphics -framework CoreImage -framework CoreMedia -framework CoreText -framework CoreVideo -framework Foundation -framework MobileCoreServices -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit -lc++ -liconv -lz'
    }
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/RestKit/Vendor/LibComponentLogging/Core,$(PODS_ROOT)/RestKit/Support" }
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/RestKit/Vendor/LibComponentLogging/Core,$(PODS_ROOT)/RestKit/Support" }
   # s.dependency "JSONKit", "~> 1.4"
 
   

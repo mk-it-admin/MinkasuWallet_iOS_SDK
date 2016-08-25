@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StartViewController.h"
-#import <Netswipe/NetswipeViewController.h>
+//  #import <Netswipe/NetswipeViewController.h>
 #import "MinkasuStateManager.h"
 
 #define FTU_NEXT_STEP_NONE 0
@@ -16,7 +16,7 @@
 #define FTU_NEXT_STEP_DISMISS_VIEW 2
 
 
-@interface FTUSetupPaymentInfoViewController : UIViewController<UITextFieldDelegate, UIScrollViewDelegate,NetswipeViewControllerDelegate>
+@interface FTUSetupPaymentInfoViewController : UIViewController<UITextFieldDelegate, UIScrollViewDelegate>//,NetswipeViewControllerDelegate>
 
 @property StartViewController *root_view_controller;
 @property NSString *screen_title;
@@ -53,7 +53,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *ScrollViewContainer;
 @property (nonatomic,strong) UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIView *ShippingAddressHeaderView;
-@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
+//@property (weak, nonatomic) IBOutlet UIButton *netswipeButton;
 
 @property int next_step_when_view_appears;
 
@@ -65,9 +65,9 @@
 
 - (BOOL) textFieldShouldReturn: (UITextField *) textField;
 
-@property (nonatomic, strong) NetswipeViewController *netswipeViewController;
+//@property (nonatomic, strong) NetswipeViewController *netswipeViewController;
 
-- (IBAction)startNetswipeSDK:(id)sender;
+//- (IBAction)startNetswipeSDK:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *TermsAndConditions;
 
